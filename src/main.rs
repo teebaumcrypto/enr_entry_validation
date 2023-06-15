@@ -28,6 +28,29 @@ async fn main() -> Result<()> {
     println!("entry forkid: {:?}",fork_entry_id);
 
 
+    /* 
+        OUTPUT
+        enr local: Enr { id: Some("v4"), seq: 1,
+        NodeId: 0xf9b8e4ade92a17aba1500d00b95a088df1aa5eedf96da562e98a6378314830fe, 
+        signature: "7e44476bbb0d6ffb24090731257861a6f3b9eb4eec5331640132115046b2bbf45c1ed79422ca5e9efc53880d72d67377c5aa49047a461dfa1588ea2d216b9d71", 
+        IpV4 UDP Socket: Some(0.0.0.0:61865), 
+        IpV6 UDP Socket: None, 
+        IpV4 TCP Socket: Some(0.0.0.0:0),
+        IpV6 TCP Socket: None, 
+        Other Pairs: [("eth", "c7c684dce96c2d80"), ("secp256k1", "a103323cb58a146df4265e4425f399b618d785c795cd46bbc6f59e74d5fb8a79adfb")] }
+        
+        wrapped enr: EnrWrapper(Enr { id: Some("v4"), seq: 1, 
+        NodeId: 0xf9b8e4ade92a17aba1500d00b95a088df1aa5eedf96da562e98a6378314830fe,
+         signature: "7e44476bbb0d6ffb24090731257861a6f3b9eb4eec5331640132115046b2bbf45c1ed79422ca5e9efc53880d72d67377c5aa49047a461dfa1588ea2d216b9d71", 
+         IpV4 UDP Socket: Some(0.0.0.0:61865), 
+         IpV6 UDP Socket: None, IpV4 TCP Socket: Some(0.0.0.0:0), 
+         IpV6 TCP Socket: None, 
+         Other Pairs: [("eth", "c7c684dce96c2d80"), ("secp256k1", "a103323cb58a146df4265e4425f399b618d785c795cd46bbc6f59e74d5fb8a79adfb")] })
+        
+        entry forkid: Err(UnexpectedString)
+        entry forkid: Ok(ForkId { hash: ForkHash("dce96c2d"), next: 0 })
+    
+     */
     Ok(())
 }
 
