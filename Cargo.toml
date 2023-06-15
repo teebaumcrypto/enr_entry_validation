@@ -1,0 +1,24 @@
+[package]
+name = "simulate-new-contracts"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.22.0", features = ["full"] }
+anyhow = "1"
+reth-primitives = { git = "https://github.com/teebaumcrypto/reth" }
+reth-rlp = { git = "https://github.com/teebaumcrypto/reth" }
+reth-discv4 = { git = "https://github.com/teebaumcrypto/reth", features = ["test-utils"] }
+
+enr = { version = "0.8.1", default-features = false, features = ["rust-secp256k1"] }
+
+[dev-dependencies]
+#criterion = { version = "0.4.0", features = ["html_reports", "async_tokio"] }
+
+# if we want to benchmark stuff
+# create folder+file /benches/bench.rs
+#[[bench]]
+#name = "bench"
+#harness = false
